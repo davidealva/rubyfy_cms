@@ -1,0 +1,74 @@
+
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+.dropdown:hover .menu-toggle {
+display: block;
+}
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
+
+body, html{
+
+	font-size: 14px;
+	font-weight: 200;
+	padding-top:50px;
+
+}
+
+.dropdown-header {
+	color: #fff;
+}
+
+.main-bd{
+	position: absolute;
+	top: 10em;
+	left: 5em;
+	right: 5em;
+	font-size: 1.5em;
+
+}
+.main-bd .text-bd {
+	margin: 2em;
+}
+
+.ad-bd{
+	position: absolute;
+	top: 6em;
+	left: 7em;
+	right: 7em;
+	background-color: #888;
+	padding: 2em;
+
+}
+.ad-bd .table {
+	font-size: 1.2em;
+}
+.main-heading{
+	position: absolute;
+	background-color: #5bc0de;
+	color: #fff;
+	top: .6em;
+	left: 0;
+	right: 0;
+	font-size: 5em;
+	padding-top: .4em;
+	padding-left: 0em;
+	min-height: 4em;
+}
+
+
+
+
+.authform{
+	padding-top: 50px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+#page-content-wrapper {
+		padding: 20px;
+		position: relative;
+}
+.tdata{
+	position: absolute;
+}

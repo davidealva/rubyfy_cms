@@ -1,0 +1,9 @@
+<div class="ad-bd">
+  <h2><%= @page_title %></h2>
+
+
+    <%= form_for :page, url: page_path(@page), method: :patch do |f| %>
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <% end %>
+</div>

@@ -1,0 +1,58 @@
+
+
+  <div class="col-md-4">
+    <div class="form-group">
+      <label><%= f.label :name %></label>
+        <%= f.text_field :name, class: "form-control", :size => "35" %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label><%= f.label :title %></label>
+        <%= f.text_field :title, class: "form-control", :size => "35" %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label><%= f.label :permalink %></label>
+        <%= f.text_field :permalink, class: "form-control", :size => "35" %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label><%= f.label :home %> </label>
+      <% if @page.home %>
+        <%= f.radio_button :home, true, :checked => true, :value => true %> Yes
+        <%= f.radio_button :home, false, :value => false %> No
+      <% else %>
+        <%= f.radio_button :home, true, :value => true %> Yes
+        <%= f.radio_button :home, false, :checked => true, :value => false %> No
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label><%= f.label :visible %> </label>
+      <% if @page.visible %>
+        <%= f.radio_button :visible, true, :checked => true, :value => true %> Yes
+        <%= f.radio_button :visible, false, :value => false %> No
+      <% else %>
+        <%= f.radio_button :visible, true, :value => true %> Yes
+        <%= f.radio_button :visible, false, :checked => true, :value => false %> No
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="form-group">
+      <label><%= f.label :body %></label>
+        <% #f.cktext_area :body, class: "form-control", rows: 20 %>
+        <%= f.text_area :body, class: "summernote form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= link_to "Cancel", pages_path, class: "btn btn-primary btn-md fa fa-times" %>
+        <%= button_tag(type: 'submit', class: "btn btn-primary btn-md fa fa-floppy-o") do %>
+          Save
+        <% end %>
+    </div>
+  </div>

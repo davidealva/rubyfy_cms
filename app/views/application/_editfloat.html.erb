@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <% if current_user.try(:admin?) %>
+    <div id="edit-page">
+      <%= link_to edit_page_path(@page) do %>
+        <span class="fa fa-pencil-square-o"></span>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>

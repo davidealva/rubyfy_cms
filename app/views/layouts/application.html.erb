@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Rubyfy CMS" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rubyfy CMS" %>">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/superhero/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ujs/1.2.1/rails.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- include summernote css/js-->
+
+        <%= javascript_include_tag 'application' %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+
+
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render 'layouts/navigation' %>
+
+
+
+    <div id="wrapper" class="toggled">
+
+       <%= render 'layouts/messages' %>
+       <div class="page-content-wrapper">
+           <%= yield %>
+       </div>
+    </div>
+
+
+
+
+  </body>
+</html>

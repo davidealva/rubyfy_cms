@@ -1,0 +1,19 @@
+
+
+
+  <% if @page.present? %>
+  <div class="main-heading text-center"><%= raw(@page_title) %></div>
+  <div class="main-bd">
+  <div class="panel panel-body">
+    <div class="text-bd">
+
+    <%= raw(@page.body) %>
+  <% else %>
+    <%=  raw("<br><br><br> <h1>No home page set. Please set one") %>
+      <%= link_to "here", pages_path %>
+      <%= raw("</h1>") %>
+  <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'editfloat' %>

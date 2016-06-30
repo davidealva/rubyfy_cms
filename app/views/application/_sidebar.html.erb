@@ -1,0 +1,39 @@
+        <!-- Sidebar -->
+        <nav class="navbar navbar-default sidebar" role="navigation">
+            <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <% if @page.present?  %>
+                <li>
+                    <%= link_to edit_page_path(@page) do %>Edit Page<span id="sidebar-icon" class="pull-right hidden-xs showopacity fa fa-pencil-square-o"></span><% end %>
+                </li>
+                <% end %>
+                <li>
+                    <%= link_to pages_path do %>Pages<span id="sidebar-icon" class="pull-right hidden-xs showopacity fa fa-file-text"></span><% end %>
+                </li>
+                <li>
+                    <%= link_to users_path do %>Users<span id="sidebar-icon" class="pull-right hidden-xs showopacity fa fa-users"></span><% end %>
+                </li>
+                <li>
+                    <a href="#">Menus<span id="sidebar-icon" class="pull-right hidden-xs showopacity fa fa-th-large"></span></a>
+                </li>
+                <li>
+                    <a href="#">Sidebars<span id="sidebar-icon" class="pull-right hidden-xs showopacity fa fa-list-alt"></span></a>
+                </li>
+                <li>
+                    <a href="#">Settings<span id="sidebar-icon" class="pull-right hidden-xs showopacity fa fa-cogs"></span></a>
+                </li>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- /#sidebar-wrapper -->
